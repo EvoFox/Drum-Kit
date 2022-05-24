@@ -1,4 +1,4 @@
-// Declare key codes that should be linked to sounds
+// Key Codes
 const keyCodes = {
     "boom": 49,
     "clap": 50,
@@ -11,6 +11,7 @@ const keyCodes = {
     "tom": 57
 }
 
+// Audio
 const boom = new Audio("./sounds/boom.wav");
 const clap = new Audio("./sounds/clap.wav");
 const hiHat = new Audio("./sounds/hihat.wav");
