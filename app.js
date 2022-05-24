@@ -22,7 +22,6 @@ const tink = new Audio("./sounds/tink.wav");
 const tom = new Audio("./sounds/tom.wav");
 
 document.addEventListener("click", e => {
-
     if (e.target.id in keyCodes) {
         playSound(keyCodes[e.target.id]);
     }
@@ -31,6 +30,7 @@ document.addEventListener("click", e => {
 document.addEventListener("keypress", e => {
     playSound(e.keyCode);
 });
+
 const playSound = (key) => {
     switch (key) {
         case 49:
