@@ -43,7 +43,11 @@ body{
     opacity: 80%;
 }
 .key-wrapper:active{
-    
     box-shadow: 0 5px #666;
     transform: translateY(4px);
 }
+/* this is for activating through JS instead of clicking the button */
+.activate{
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+    }
