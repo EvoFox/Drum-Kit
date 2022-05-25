@@ -48,18 +48,15 @@ const playSound = (key) => {
         case 49:
             // boom
             console.log("boom")
-
             // Trigger Animation
             btnBoom.classList.toggle('activate');
             setTimeout(() => {
                 btnBoom.classList.toggle('activate');
             }, 100)
-
             // Play Sound
             boom.pause();
             boom.currentTime = 0;
             boom.play();
-
             break;
         case 50:
             // clap
