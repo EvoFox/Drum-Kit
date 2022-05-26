@@ -11,7 +11,7 @@ const keyCodes = {
     "tom": 57
 }
 
-// Audio
+// Load Audio into memory
 const boom = new Audio("./sounds/boom.wav");
 const clap = new Audio("./sounds/clap.wav");
 const hiHat = new Audio("./sounds/hihat.wav");
@@ -33,18 +33,29 @@ const btnSnare = document.getElementById("snare");
 const btnTink = document.getElementById("tink");
 const btnTom = document.getElementById("tom");
 
+// Add window event listener for all button clicks
 document.addEventListener("click", e => {
+    // Check if the ID of the clicked div is in the keyCodes dictionary, 
+    // play the corresponding sound if it is
     if (e.target.id in keyCodes) {
         playSound(keyCodes[e.target.id]);
     }
 });
 
+// Add an event listener that passes the keyCode of keystroke to the playSound function
 document.addEventListener("keypress", e => {
     playSound(e.keyCode);
 });
 
 const playSound = (key) => {
+    // Evaluate the variable "key"
     switch (key) {
+        // If key = 49 then log the sound that should be played, toggle the "activate" class,
+        // and then after 100ms toggle it again
+        // After that, pause the sound, regardless on if it is playing
+        // set the current time of the sound to 0 to restart it
+        // then play the sound. 
+        // After this break out of the function
         case 49:
             // boom
             console.log("boom")
